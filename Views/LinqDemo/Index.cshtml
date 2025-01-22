@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+<h2>LINQ Demo</h2>
+
+<h3>Filtered Students (Age > 20)</h3>
+<ul>
+    @foreach (var student in Model.FilteredByAge)
+    {
+        <li>@student.Name - @student.Age</li>
+    }
+</ul>
+
+<h3>First Student</h3>
+<p>@Model.FirstStudent?.Name</p>
+
+<h3>Sorted Students (Ascending Order)</h3>
+<ul>
+    @foreach (var student in Model.SortedAsc)
+    {
+        <li>@student.Name</li>
+    }
+</ul>
+
+<h3>Grouped by Course</h3>
+<ul>
+    @foreach (var group in Model.GroupedByCourse)
+    {
+        <li>@group.Course - @group.Count Students</li>
+    }
+</ul>
+
+<h3>Max Grade:</h3>
+<p>@Model.MaxGrade</p>
+
+<h3>Min Grade:</h3>
+<p>@Model.MinGrade</p>
+
+<h3>Total Students:</h3>
+<p>@Model.TotalStudents</p>
+
+<h3>Distinct Courses:</h3>
+<ul>
+    @foreach (var course in Model.DistinctCourses)
+    {
+        <li>@course</li>
+    }
+</ul>
+
+<h3>Take First 2 Students</h3>
+<ul>
+    @foreach (var student in Model.TakeTwo)
+    {
+        <li>@student.Name</li>
+    }
+</ul>
+
+<h3>Contains Student Check</h3>
+<p>@(Model.ContainsStudent ? "Yes" : "No")</p>
+
+<h3>All Students Passed?</h3>
+<p>@(Model.AllPassing ? "Yes" : "No")</p>
+
+<h3>Any Student Above 20?</h3>
+<p>@(Model.AnyAbove20 ? "Yes" : "No")</p>
