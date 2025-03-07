@@ -1,0 +1,1 @@
+The LINQ Essentials project is designed to demonstrate the most commonly used and important concepts in Language Integrated Query (LINQ) within a .NET environment. The project includes practical implementations of various LINQ methods, showcasing how data can be queried, transformed, and processed efficiently. 
